@@ -33,7 +33,9 @@
 		}
 		,
     "étudier" : {
-        "message" : "Oui, le contenu est automatiquement couvert dans ton contrat reebou family. N'oublie pas de vérifier auprès du propriétaire qu'il a bien assuré le bâtiment!"
+        "message" : "Oui, le contenu est automatiquement couvert dans ton contrat reebou family. N'oublie pas de vérifier auprès du propriétaire qu'il a bien assuré le bâtiment!",
+        "reponses" : [ {"label" : "Merci", "code" :"abort"}
+        			]
     	}
     	,
     "accompagnée" : {

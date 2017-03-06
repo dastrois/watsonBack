@@ -38,16 +38,18 @@ app.post('/messages', function(req, res){
 		for (var i in words){
 			w = words[i];
 			console.log("W " + w);
-			if (messages[w]){
-				message = messages[w];
-				console.log("w " + w + message);
+			var w1 = w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+			console.log("W1" + w1);
+			if (messages[w1]){
+				message = messages[w1];
+				console.log("w1 " + w1 + message);
 			}
 		}
 		
 		if (! message){
 			message = {
 					"message" : "je ne peux répondre, voulez-vous prendre contact avec votre agent ?",
-					"reponse" : ["Oui","Non"]
+					"reponses" : ["Oui","Non"]
 					}
 		}
 		console.log("Mess" + message);
