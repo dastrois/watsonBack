@@ -63,8 +63,12 @@
     	}
     	,
 	"deuxNo" : {
-		"message" : "Merci!",
-        "reponses" : [    {"label" : "Non", "code" :"abort"}
+		"message" : "Sur quel contrat faut-il l'ajouter?",
+        "reponses" : [    {"label" : "Sur mon contrat", "code" :"unContrat"}
                     ]
-    }
+    	}
+    	,
+     "uncontrat" : {
+        "message" : "Très bien la demande a été envoyée à ton agent. Tu recevras une notification quand ton contrat sera adapté"
+    	}
 }
