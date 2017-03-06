@@ -71,4 +71,10 @@
      "uncontrat" : {
         "message" : "Très bien la demande a été envoyée à ton agent. Tu recevras une notification quand ton contrat sera adapté"
     	}
+    	, 
+    "dateTime" : {
+    	"message" : "Très, ton agent te prendra contact avec toi.",
+    	"reponse" : [	{"label" : "merci", "code" : "abort"}
+    				]
+    }
 }
