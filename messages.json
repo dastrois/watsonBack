@@ -1,0 +1,68 @@
+{
+	"villégiature" : {
+		"message" : "Tu n'es pas couvert pour le risque villégiature, souhaites-tu souscrire à une assurance villégiature ?", 
+		"reponses" : [	{"label" : "Oui", "code" :"villYes"},
+						{"label" : "Non", "code" :"villNo"}
+					]
+	}
+	,
+	"annulation" : {
+		"message" : "Non. Est-ce que tu souhaites en souscrire une ?", 
+		"reponses" : [	{"label" : "Oui", "code" :"annulYes"},
+						{"label" : "Non", "code" :"annulNo"}
+					]
+	}
+	,
+	"annulYes" : {
+		"message" : "Une notification a été envoyée à l’agent. Quand souhaites-tu être contacté ?", 
+		"reponses" : [	{"label" : "Quand", "code" :"abort"}
+					]
+	}
+	, 
+	"annulNo" : {
+		"message" : "Merci",
+		"reponses" : [	{"label" : "Merci", "code" :"abort"}
+					]
+	}
+	, 
+	"fenêtre" : {
+		"message" : "C’est couvert par ton assurance Responsabilité Civile. Pour assurer un remboursement rapide, il faut compléter une déclaration et joindre un devis. Veux-tu le déclarer ? ", 
+		"reponses" : [	{"label" : "Oui", "code" :"sinistRClYes"},
+						{"label" : "Non", "code" :"sinistRCNo"}
+					]
+		}
+		,
+    "étudier" : {
+        "message" : "Oui, le contenu est automatiquement couvert dans ton contrat reebou family. N'oublie pas de vérifier auprès du propriétaire qu'il a bien assuré le bâtiment!"
+    	}
+    	,
+    "accompagnée" : {
+        "message" : "Non. Il suffit d'informer ton agent pour qu'il l'ajoute dans ton contrat d'assurance. Veux-tu que j'infome ton agent?",
+        "reponses" : [  {"label" : "Oui", "code" :"accompagneeYes"},
+                        {"label" : "Non", "code" :"accompagneeNo"}
+                    ]
+		}
+		,
+    "accompagneeYes" : {
+        "message" : "Faut-il l'ajouter sur les deux contrats d'assurance auto?",
+        "reponses" : [    {"label" : "Oui", "code" :"deuxYes"},
+                        {"label" : "Non", "code" :"deuxNo"}
+                    ]
+    	}
+    	,
+    "accompagneeno" : {
+    	"message" : "Merci!",
+        "reponses" : [    {"label" : "No", "code" :"abort"}
+                    ]
+    	}
+    	,
+    "deuxyes" : {
+        "message" : "Très bien la demande a été envoyée à ton agent. Tu recevras une notification quand tes contrats seront adaptés"
+    	}
+    	,
+	"deuxno" : {
+		"message" : "Merci!",
+        "reponses" : [    {"label" : "Non", "code" :"abort"}
+                    ]
+    }
+}

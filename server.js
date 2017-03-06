@@ -1,7 +1,63 @@
 var express = require('express');
 var app = express();
 
+var bodyParser = require('body-parser');
 var fs = require("fs");
+
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.all('*', function(req, res, next) {
+	  res.header("Access-Control-Allow-Origin", "*");
+	  res.header("Access-Control-Allow-Headers", "Content-Type");
+	  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+	  next();
+});
+
+app.post('/message/:id', function(req, res){
+	fs.readFile(__dirname + "/" + "messages.json", "utf8", function(err, data) {
+		messages = JSON.parse(data);
+		var message = messages[req.params.id]
+		console.log(message);
+		res.end(JSON.stringify(message));
+	});
+})
+
+app.post('/messages', function(req, res){
+	
+	var question = req.body;
+	console.log("Quest " + question);
+	
+	words = question.question.split(" ");
+	console.log("Words" + words);
+	
+	var message = null;
+	fs.readFile(__dirname + "/" + "messages.json", "utf8", function(err, data) {
+		messages = JSON.parse(data);
+		for (var i in words){
+			w = words[i];
+			console.log("W " + w);
+			if (messages[w]){
+				message = messages[w];
+				console.log("w " + w + message);
+			}
+		}
+		
+		if (! message){
+			message = {
+					"message" : "je ne peux répondre, voulez-vous prendre contact avec votre agent ?",
+					"reponse" : ["Oui","Non"]
+					}
+		}
+		console.log("Mess" + message);
+		res.end(JSON.stringify(message));
+	});
+
+	//res.end(JSON.stringify(message));
+})
+
+
 
 app.get('/listUsers', function (req, res) {
    fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
