@@ -68,19 +68,19 @@
                     ]
     	}
     	,
-     "uncontrat" : {
+     "unContrat" : {
         "message" : "Très bien la demande a été envoyée à ton agent. Tu recevras une notification quand ton contrat sera adapté"
     	}
     	, 
     "dateTime" : {
-    	"message" : "Très, ton agent te prendra contact avec toi.",
+    	"message" : "Très bien, ton agent prendra contact avec toi.",
     	"reponse" : [	{"label" : "merci", "code" : "abort"}
     				]
     	}
     	,
     "sinistRClYes" : {
-    	"message" : "Une déclaration vous a été envoyée, celle-ci vous parviendra d’ici peu. ",
-    	"reponse" : [	{"label" : "merci", "code" : "abort"}
+    	"message" : "",
+    	"reponse" : [	{"label" : "merci", "code" : "call"}
     				]
     	}
     	,

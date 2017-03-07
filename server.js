@@ -15,6 +15,52 @@ app.all('*', function(req, res, next) {
 	  next();
 });
 
+getNotif = function(idNotif){
+	fs.readFile(__dirname + "/" + "notifications.json", "utf8", function(err, data){
+		notifs = JSON.parse(data);
+		notif = notifs[idNotif];
+		notif.status = "waiting";
+		notifs[idNotif] = notif;
+		fs.writeFile(__dirname + "/" + "notifications.json", JSON.stringify(notifs), function(err, data){
+	    	   
+	       });
+
+	});
+}
+
+app.get('/notifications', function(req, res){
+	
+	var notif = null;
+	
+	fs.readFile(__dirname + "/" + "notifications.json", "utf8", function(err, data){
+		notifs = JSON.parse(data);
+		console.log("ns" + notifs);
+		
+		for (var i in notifs){
+			n = notifs[i];
+			console.log ("n " + n);
+			if (n.status == "waiting"){
+				console.log(JSON.stringify(n));
+				notif = n;
+			}
+		}
+		
+		console.log(JSON.stringify(notif));
+		
+		if (notif){
+		notif.status = "done";
+		notifs[notif.id] = notif
+		fs.writeFile(__dirname + "/" + "notifications.json", JSON.stringify(notifs), function(err, data){
+	    	   
+	       });
+		}
+		res.end(JSON.stringify(notif));
+
+	});
+	
+	
+})
+
 app.post('/message/:id', function(req, res){
 	fs.readFile(__dirname + "/" + "messages.json", "utf8", function(err, data) {
 		messages = JSON.parse(data);
@@ -43,6 +89,14 @@ app.post('/messages', function(req, res){
 			if (messages[w1]){
 				message = messages[w1];
 				console.log("w1 " + w1 + message);
+				switch (w1){
+				case "accompagnée" :
+					getNotif("voyage");
+					break;
+				case "fenêtre" :
+					getNotif("meteo");
+					break;
+				}
 			}
 		}
 		
