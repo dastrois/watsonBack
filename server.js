@@ -49,7 +49,10 @@ app.post('/messages', function(req, res){
 		if (! message){
 			message = {
 					"message" : "je ne peux répondre, voulez-vous prendre contact avec votre agent ?",
-					"reponses" : ["Oui","Non"]
+					"reponses" : 
+									[  {"label" : "Oui", "code" :"deuxYes"},
+						                {"label" : "Non", "code" :"deuxNo"}
+						            ]
 					}
 		}
 		console.log("Mess" + message);

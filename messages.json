@@ -76,5 +76,18 @@
     	"message" : "Très, ton agent te prendra contact avec toi.",
     	"reponse" : [	{"label" : "merci", "code" : "abort"}
     				]
+    	}
+    	,
+    "sinistRClYes" : {
+    	"message" : "Une déclaration vous a été envoyée, celle-ci vous parviendra d’ici peu. ",
+    	"reponse" : [	{"label" : "merci", "code" : "abort"}
+    				]
+    	}
+    	,
+    "sinistRClNo" : {
+    	"message" : "Merci.",
+    	"reponse" : [	{"label" : "merci", "code" : "abort"}
+    				]
     }
+    
 }
