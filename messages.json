@@ -95,9 +95,19 @@
     	"responses" : [{}]
     	}
     	,
-      "Elémentaire" : {
+    "Elémentaire" : {
     	"message" : "mon cher ;-)",
     	"responses" : [{}]
-    }
+    	}
+    	,
+    "Élémentaire" : {
+    	"message" : "mon cher ;-) Made with <3 by Watson team, 2017",
+    	"responses" : [{}]
+    	}
+    	,
+	"Merci" : {
+    	"message" : "Gaer geschitt",
+    	"responses" : [{}]
+	}
     
 }
