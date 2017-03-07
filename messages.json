@@ -74,20 +74,30 @@
     	, 
     "dateTime" : {
     	"message" : "Très bien, ton agent prendra contact avec toi.",
-    	"reponse" : [	{"label" : "merci", "code" : "abort"}
+    	"reponses" : [	{"label" : "merci", "code" : "abort"}
     				]
     	}
     	,
     "sinistRClYes" : {
-    	"message" : "",
-    	"reponse" : [	{"label" : "merci", "code" : "call"}
+    	"message" : "A ton service.",
+    	"reponses" : [	{"label" : "merci", "code" : "call"}
     				]
     	}
     	,
     "sinistRClNo" : {
     	"message" : "Merci.",
-    	"reponse" : [	{"label" : "merci", "code" : "abort"}
+    	"reponses" : [	{"label" : "merci", "code" : "abort"}
     				]
+    	}
+    	,
+    "élémentaire" : {
+    	"message" : "mon cher ;-). Made with <3 by Watson team, 2017",
+    	"responses" : [{}]
+    	}
+    	,
+      "Elémentaire" : {
+    	"message" : "mon cher ;-)",
+    	"responses" : [{}]
     }
     
 }

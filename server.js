@@ -55,7 +55,7 @@ app.get('/notifications', function(req, res){
 	       });
 		}
 		res.end(JSON.stringify(notif));
-
+//		res.end(JSON.stringify(null));
 	});
 	
 	
@@ -76,7 +76,7 @@ app.post('/messages', function(req, res){
 	console.log("Quest " + question);
 	
 	words = question.question.split(" ");
-	console.log("Words" + words);
+	console.log("Words " + words);
 	
 	var message = null;
 	fs.readFile(__dirname + "/" + "messages.json", "utf8", function(err, data) {
@@ -85,15 +85,15 @@ app.post('/messages', function(req, res){
 			w = words[i];
 			console.log("W " + w);
 			var w1 = w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-			console.log("W1" + w1);
+			console.log("W1 " + w1);
 			if (messages[w1]){
 				message = messages[w1];
 				console.log("w1 " + w1 + message);
 				switch (w1){
-				case "accompagnée" :
+				case "deuxYes" :
 					getNotif("voyage");
 					break;
-				case "fenêtre" :
+				case "sinistRClYes" :
 					getNotif("meteo");
 					break;
 				}
@@ -109,7 +109,7 @@ app.post('/messages', function(req, res){
 						            ]
 					}
 		}
-		console.log("Mess" + message);
+		console.log("Mess" + JSON.stringify(message));
 		res.end(JSON.stringify(message));
 	});
 
