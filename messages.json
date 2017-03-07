@@ -14,7 +14,7 @@
 	}
 	,
 	"annulYes" : {
-		"message" : "Une notification a été envoyée à l’agent. Quand souhaites-tu être contacté ?", 
+		"message" : "Je vais demander à ton agent de te contacter pour établir le contrat. Quand souhaites-tu être contacté ?", 
 		"reponses" : [	{"label" : "Quand", "code" :"dateTime"}
 					]
 	}
