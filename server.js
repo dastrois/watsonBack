@@ -90,10 +90,10 @@ app.post('/messages', function(req, res){
 				message = messages[w1];
 				console.log("w1 " + w1 + message);
 				switch (w1){
-				case "deuxYes" :
+				case "sinistRClYes" :
 					getNotif("voyage");
 					break;
-				case "sinistRClYes" :
+				case "annulYes" :
 					getNotif("meteo");
 					break;
 				}

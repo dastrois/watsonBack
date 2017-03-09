@@ -32,6 +32,13 @@
 					]
 		}
 		,
+	"vitre" : {
+		"message" : "C’est couvert par ton assurance Responsabilité Civile. Pour assurer un remboursement rapide, il faut compléter une déclaration et joindre un devis. Veux-tu contacter ton agent pour déclarer le sinistre ? ", 
+		"reponses" : [	{"label" : "Oui", "code" :"sinistRClYes"},
+						{"label" : "Non", "code" :"sinistRCNo"}
+					]
+		}
+		,
     "étudier" : {
         "message" : "Oui, le contenu est automatiquement couvert dans ton contrat reebou family. N'oublie pas de vérifier auprès du propriétaire qu'il a bien assuré le bâtiment!",
         "reponses" : [ {"label" : "Merci", "code" :"abort"}
